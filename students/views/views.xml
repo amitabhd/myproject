@@ -1,0 +1,59 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="students_view_form">
+      <field name="name">students list</field>
+      <field name="model">students.studentdata</field>
+
+      <field name="arch" type="xml">
+        <form>
+            <sheet>
+              <group col="4">
+                <field name="name"/>
+                <field name="dob"/>
+                <field name="gender"/>
+                <field name="phoneno"/>
+
+              </group>
+              <group col="4">
+                <field name="emailid"/>
+                <field name="undergraduate"/>
+                <field name="age" />
+                 <field name="relatedcontact" />
+
+              </group>
+              <group colspan="6">
+                <field name="coursetaken" />
+              </group>
+
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="students.list">
+      <field name="name">students list</field>
+      <field name="res_model">students.studentdata</field>
+      <field name="arch" type="xml">
+            <tree>
+              <sheet>
+                  <field name="name"/>
+                  <field name="dob"/>
+                  <field name="gender"/>
+                  <field name="phoneno"/>
+              </sheet>
+            </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <!-- Top menu item -->
+    <menuitem name="Students" id="students.menu_root" parent='contacts.menu_contacts' action="students.list" />
+
+
+  </data>
+</odoo>

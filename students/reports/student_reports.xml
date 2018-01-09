@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <report id="report_student_action"  string="Students Report" model="students.studentdata"  report_type="qweb-pdf"
+        name="students.report_todo_task_template" />
+    </data>
+</odoo>
