@@ -1,0 +1,12 @@
+<odoo>
+    <data>
+        <template id="catid">
+            <title>Academy</title>
+            <ul style="margin:0px;padding:0px;">
+            <t t-foreach="category" t-as="cat">
+              <li style="display:inline-block;padding:5px;width:150px;border:1px solid #cccccc;background:#885500;color:#ffffff;"><t t-esc="cat"/></li>
+            </t>
+            </ul>
+        </template>
+    </data>
+</odoo>
